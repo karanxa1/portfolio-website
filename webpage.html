@@ -1,0 +1,167 @@
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+
+const Portfolio = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header/Hero Section */}
+      <header className="bg-blue-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Karan Rajput</h1>
+          <div className="flex flex-wrap gap-4 items-center text-sm">
+            <div className="flex items-center gap-2">
+              <MapPin size={16} />
+              <span>Pune, India 411043</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone size={16} />
+              <span>9309963483</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={16} />
+              <span>karanravirajput@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8 space-y-8">
+        {/* Summary */}
+        <Card>
+          <CardHeader>
+            <CardTitle>About Me</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-700">
+              Hardworking professional with customer service, multitasking, and time management abilities.
+              Devoted to giving every customer a positive and memorable experience. Experienced in developing
+              robust Python applications with a focus on clean, efficient code and debugging. Strong
+              collaboration skills with cross-functional teams to deliver high-quality software solutions.
+              Committed to problem-solving and continuous learning to stay updated with industry trends.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Skills */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Skills</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              {/* Technical Skills */}
+              <div>
+                <h3 className="font-semibold mb-2">Technical Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript",
+                    "React.js",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "Responsive Design",
+                    "Web Performance Optimization",
+                    "Version Control (Git)",
+                    "UI/UX Principles",
+                    "RESTful APIs",
+                    "Python",
+                    "Node.js",
+                    "MongoDB",
+                    "SQL"
+                  ].map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-sm">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              {/* Soft Skills */}
+              <div>
+                <h3 className="font-semibold mb-2">Professional Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Time Management",
+                    "Active Listening",
+                    "Excellent Communication",
+                    "Organizational Skills",
+                    "Problem Resolution",
+                    "Team Management",
+                    "Teamwork",
+                    "Multitasking",
+                    "Customer Service",
+                    "IT Literacy",
+                    "Data Analysis",
+                    "Project Management",
+                    "Agile Methodology"
+                  ].map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-sm">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Education */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Education</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <h3 className="font-semibold text-lg">Certificate of Higher Education: Data Science in Python</h3>
+              <p className="text-gray-600">IIT Ropar, 2024</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">Bachelor of Technology: Electronics and Telecommunication</h3>
+              <p className="text-gray-600">Anantrao Pawar College of Engineering, Pune, Maharashtra, India</p>
+              <p className="text-gray-600">Expected: June 2027</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Languages */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Languages</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="font-medium">English</span>
+                <Badge>C2 (Proficient)</Badge>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="font-medium">Hindi</span>
+                <Badge>B2 (Upper Intermediate)</Badge>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center space-x-4">
+            <a href="https://github.com/karanxa1" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+              <Github size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/karan-rajput-2190ab280/" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+              <Linkedin size={24} />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Portfolio;
